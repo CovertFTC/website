@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission — Covert Robotics</title>
+  <meta name="description" content="The mission of Covert Robotics: turning students into engineers, programmers, and leaders through the FIRST Tech Challenge.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Chakra+Petch:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="index.html" aria-label="Covert Robotics home">
+      <img class="nav-mark" src="assets/mark.svg" alt="">
+      <span class="nav-name">COVERT<em>ROBOTICS</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="mission.html" aria-current="page"><span>01</span>Mission</a>
+      <a href="team.html"><span>02</span>Team</a>
+      <a href="sponsors.html"><span>03</span>Sponsors</a>
+      <a href="contact.html"><span>04</span>Contact</a>
+      <a class="nav-cta" href="sponsors.html">Sponsor&nbsp;Us</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <p class="mono-tag reveal-load" style="--d:0">01 // MISSION</p>
+      <h1 class="reveal-load" style="--d:1">Operating Directive</h1>
+    </section>
+
+    <section class="section">
+      <div class="mission-grid">
+        <div class="mission-copy reveal">
+          <p class="big-line">
+            We exist to turn students into <mark>engineers</mark>,
+            <mark>programmers</mark>, and <mark>leaders</mark> — one robot at a time.
+          </p>
+          <p>
+            Covert Robotics is a student-led FIRST Tech Challenge team. Every season we
+            take on a new game challenge: we design our robot in CAD, machine and
+            assemble it by hand, write its software, and drive it head-to-head against
+            teams from across the region.
+          </p>
+          <p>
+            Beyond the competition field, we practice <em>gracious professionalism</em> —
+            mentoring younger teams, running STEM outreach in our community, and sharing
+            everything we learn.
+          </p>
+        </div>
+
+        <!-- populated from data/site.js -->
+        <div class="stats reveal" id="statsGrid"></div>
+      </div>
+
+      <div class="ftc-card reveal">
+        <div class="corner tl"></div><div class="corner tr"></div>
+        <div class="corner bl"></div><div class="corner br"></div>
+        <h3>What is FIRST Tech Challenge?</h3>
+        <p>
+          FTC is a global robotics program where teams of students in grades 7–12
+          design, build, and program robots to compete in an alliance format against
+          other teams. It's more than robots — teams manage budgets, document their
+          engineering process, and do community outreach, all judged alongside
+          on-field performance.
+        </p>
+        <a class="text-link" href="https://www.firstinspires.org/robotics/ftc" target="_blank" rel="noopener">Learn more at firstinspires.org →</a>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: clamp(4rem, 9vw, 7rem);">
+        <p class="mono-tag">01.B // FIELD OPS</p>
+        <h2>Outreach</h2>
+        <p class="section-lede">
+          The mission doesn't stop at the practice field. We bring robots, code, and
+          hands-on engineering to elementary classrooms and community events —
+          recruiting the next generation of builders.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="photo-frame wide reveal">
+          <img src="assets/outreach-build.jpg" alt="Covert Robotics members teaching young students a hands-on coding activity in a classroom" loading="lazy">
+          <figcaption>// TEACHING PROGRAMMING LOGIC AT A LOCAL ELEMENTARY SCHOOL</figcaption>
+        </figure>
+        <figure class="photo-frame crop-top reveal">
+          <img src="assets/outreach-table.jpg" alt="Students and mentors building with robotics kits at a classroom table" loading="lazy">
+          <figcaption>// HANDS-ON BUILD SESSION</figcaption>
+        </figure>
+        <figure class="photo-frame reveal">
+          <img src="assets/outreach-group.jpg" alt="Covert Robotics team members with a classroom of young students and a competition robot" loading="lazy">
+          <figcaption>// MISSION COMPLETE — NEW RECRUITS BRIEFED</figcaption>
+        </figure>
+      </div>
+
+      <div class="page-next reveal">
+        <a class="btn btn-ghost" href="team.html">Next: Meet the Team →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer-mark" src="assets/mark.svg" alt="">
+    <p class="footer-line">COVERT ROBOTICS // FTC TEAM <span data-team-number>36702</span></p>
+    <p class="footer-fine">
+      <span id="year"></span> Covert Robotics.
+      <em>FIRST®</em> and <em>FIRST® Tech Challenge</em> are registered trademarks of FIRST.
+    </p>
+  </footer>
+
+  <script src="data/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
