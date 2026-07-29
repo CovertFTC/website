@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_DATA } from "@/data/site";
+import SITE_DATA from "@/data/site.json";
 
 export default function Home() {
   return (

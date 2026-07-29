@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SocialLinks from "@/components/SocialLinks";
-import { SITE_DATA } from "@/data/site";
+import SITE_DATA from "@/data/site.json";
 
 export const metadata: Metadata = {
   title: "Contact",

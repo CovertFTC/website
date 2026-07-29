@@ -14,17 +14,19 @@ Open [http://localhost:3000](http://localhost:3000).
 
 **All editable content lives in `src/data/`:**
 
-- [`src/data/site.ts`](src/data/site.ts) — rarely-changing config: `teamNumber`
-  (home hero + every footer), `email` (contact page + "Become a Sponsor"
-  button), `socials` (link buttons on the contact page)
-- [`src/data/members.ts`](src/data/members.ts) — the team cards (initials,
-  name, role)
-- [`src/data/sponsors.ts`](src/data/sponsors.ts) — sponsor slots on the
+- [`src/data/site.json`](src/data/site.json) — rarely-changing config:
+  `teamNumber` (home hero + every footer), `email` (contact page + "Become a
+  Sponsor" button), `socials` (link buttons on the contact page)
+- [`src/data/members.json`](src/data/members.json) — the team cards
+  (`initials`, `name`, `role`, optional `photo`). If `photo` is set (a path
+  like `/team/jane.jpg`, image dropped in `public/team/`), it's shown instead
+  of the initials
+- [`src/data/sponsors.json`](src/data/sponsors.json) — sponsor slots on the
   sponsors page; while the list is empty the page shows "Your Logo Here"
   placeholders. Add entries like
-  `{ name: "ACME Corp", logo: "/sponsor-acme.png", url: "https://acme.com" }`
+  `{ "name": "ACME Corp", "logo": "/sponsor-acme.png", "url": "https://acme.com" }`
   (logo and url optional — drop logo images into `public/`)
-- [`src/data/stats.ts`](src/data/stats.ts) — the animated counters on the
+- [`src/data/stats.json`](src/data/stats.json) — the animated counters on the
   mission page
 
 Longer prose (mission text, page intros) lives directly in each page's

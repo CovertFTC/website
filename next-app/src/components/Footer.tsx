@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SITE_DATA } from "@/data/site";
+import SITE_DATA from "@/data/site.json";
 
 export default function Footer() {
   const [year, setYear] = useState<number | null>(null);

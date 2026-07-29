@@ -1,4 +1,7 @@
-import { TEAM_MEMBERS } from "@/data/members";
+import membersData from "@/data/members.json";
+
+type Member = { initials: string; name: string; role: string; photo?: string };
+const TEAM_MEMBERS = membersData as Member[];
 
 export default function TeamGrid() {
   return (
@@ -6,7 +9,11 @@ export default function TeamGrid() {
       {TEAM_MEMBERS.map((m) => (
         <article className="agent reveal" key={m.initials}>
           <div className="agent-visor">
-            <span className="agent-init">{m.initials}</span>
+            {m.photo ? (
+              <img src={m.photo} alt={m.name} loading="lazy" />
+            ) : (
+              <span className="agent-init">{m.initials}</span>
+            )}
           </div>
           <h3>{m.name}</h3>
           <p className="agent-role">

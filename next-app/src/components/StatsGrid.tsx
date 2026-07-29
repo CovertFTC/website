@@ -1,4 +1,4 @@
-import { STATS } from "@/data/stats";
+import STATS from "@/data/stats.json";
 
 export default function StatsGrid() {
   return (

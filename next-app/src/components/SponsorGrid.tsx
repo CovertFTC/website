@@ -1,4 +1,7 @@
-import { SPONSORS } from "@/data/sponsors";
+import sponsorsData from "@/data/sponsors.json";
+
+type Sponsor = { name: string; logo?: string; url?: string };
+const SPONSORS = sponsorsData as Sponsor[];
 
 export default function SponsorGrid() {
   if (SPONSORS.length === 0) {
