@@ -78,25 +78,25 @@ export default function Home() {
 
         <div className="brief-grid">
           <Link className="brief-card reveal" href="/mission">
-            <p className="mono-tag">01</p>
+            <p className="mono-tag">02</p>
             <h3>Mission</h3>
             <p>Who we are, why we build, and what the FIRST Tech Challenge is all about.</p>
             <span className="brief-go">Read the directive →</span>
           </Link>
           <Link className="brief-card reveal" href="/team">
-            <p className="mono-tag">02</p>
+            <p className="mono-tag">03</p>
             <h3>Team</h3>
             <p>Meet the operatives — the students who design, wire, program, and drive.</p>
             <span className="brief-go">View personnel →</span>
           </Link>
           <Link className="brief-card reveal" href="/sponsors">
-            <p className="mono-tag">03</p>
+            <p className="mono-tag">04</p>
             <h3>Sponsors</h3>
             <p>The backers who keep our motors turning, and how you can join them.</p>
             <span className="brief-go">Fund the mission →</span>
           </Link>
           <Link className="brief-card reveal" href="/contact">
-            <p className="mono-tag">04</p>
+            <p className="mono-tag">05</p>
             <h3>Contact</h3>
             <p>Open a channel — email, social media, and everywhere to find us.</p>
             <span className="brief-go">Establish comms →</span>

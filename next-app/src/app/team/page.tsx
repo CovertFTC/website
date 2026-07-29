@@ -14,7 +14,7 @@ export default function TeamPage() {
       <section className="page-hero">
         <div className="hero-grid-bg" aria-hidden="true"></div>
         <p className="mono-tag reveal-load" style={{ ["--d" as string]: 0 }}>
-          02 // PERSONNEL
+          03 // PERSONNEL
         </p>
         <h1 className="reveal-load" style={{ ["--d" as string]: 1 }}>
           The Operatives

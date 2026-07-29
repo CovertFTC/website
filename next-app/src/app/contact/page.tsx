@@ -14,7 +14,7 @@ export default function ContactPage() {
       <section className="page-hero">
         <div className="hero-grid-bg" aria-hidden="true"></div>
         <p className="mono-tag reveal-load" style={{ ["--d" as string]: 0 }}>
-          04 // COMMS
+          05 // COMMS
         </p>
         <h1 className="reveal-load" style={{ ["--d" as string]: 1 }}>
           Open a Channel

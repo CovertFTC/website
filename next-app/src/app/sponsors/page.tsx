@@ -15,7 +15,7 @@ export default function SponsorsPage() {
       <section className="page-hero">
         <div className="hero-grid-bg" aria-hidden="true"></div>
         <p className="mono-tag reveal-load" style={{ ["--d" as string]: 0 }}>
-          03 // BACKERS
+          04 // BACKERS
         </p>
         <h1 className="reveal-load" style={{ ["--d" as string]: 1 }}>
           Mission Funding

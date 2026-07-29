@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const NAV_LINKS = [
-  { href: "/mission", label: "Mission", num: "01" },
-  { href: "/team", label: "Team", num: "02" },
-  { href: "/sponsors", label: "Sponsors", num: "03" },
-  { href: "/contact", label: "Contact", num: "04" },
+  { href: "/", label: "Home", num: "01" },
+  { href: "/mission", label: "Mission", num: "02" },
+  { href: "/team", label: "Team", num: "03" },
+  { href: "/sponsors", label: "Sponsors", num: "04" },
+  { href: "/contact", label: "Contact", num: "05" },
 ];
 
 export default function Header() {

@@ -14,7 +14,7 @@ export default function MissionPage() {
       <section className="page-hero">
         <div className="hero-grid-bg" aria-hidden="true"></div>
         <p className="mono-tag reveal-load" style={{ ["--d" as string]: 0 }}>
-          01 // MISSION
+          02 // MISSION
         </p>
         <h1 className="reveal-load" style={{ ["--d" as string]: 1 }}>
           Operating Directive
@@ -63,7 +63,7 @@ export default function MissionPage() {
         </div>
 
         <div className="section-head reveal" style={{ marginTop: "clamp(4rem, 9vw, 7rem)" }}>
-          <p className="mono-tag">01.B // FIELD OPS</p>
+          <p className="mono-tag">02.B // FIELD OPS</p>
           <h2>Outreach</h2>
           <p className="section-lede">
             The mission doesn&apos;t stop at the practice field. We bring robots, code, and
