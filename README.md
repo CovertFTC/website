@@ -31,21 +31,27 @@ python3 -m http.server 8000
 
 ## Editing content
 
-**All editable content lives in one file: [`data/site.js`](data/site.js).** It's a plain JSON object — edit it and refresh:
+**All editable content lives in `data/`.** Each file is a plain JSON value assigned
+to a `window` global — edit it and refresh:
 
-- `teamNumber` — shows in the home hero and every footer
-- `email` — contact page + "Become a Sponsor" button
-- `stats` — the animated counters on the mission page
-- `members` — the team cards (initials, name, role)
-- `socials` — the link buttons on the contact page
-- `sponsors` — sponsor slots on the sponsors page; while the list is empty the page
-  shows "Your Logo Here" placeholders. Add entries like
+- [`data/site.js`](data/site.js) — rarely-changing config: `teamNumber` (home hero
+  + every footer), `email` (contact page + "Become a Sponsor" button), `socials`
+  (link buttons on the contact page)
+- [`data/members.js`](data/members.js) — the team cards (initials, name, role)
+- [`data/sponsors.js`](data/sponsors.js) — sponsor slots on the sponsors page;
+  while the list is empty the page shows "Your Logo Here" placeholders. Add
+  entries like
   `{ "name": "ACME Corp", "logo": "assets/sponsor-acme.png", "url": "https://acme.com" }`
   (logo and url optional — drop logo images into `assets/`)
+- [`data/stats.js`](data/stats.js) — the animated counters on the mission page
 
-The JSON lives in a `.js` file (assigned to `window.SITE_DATA`) instead of a `.json`
-file so the site still works when `index.html` is opened directly from disk —
-browsers block `fetch()` of local `.json` files over `file://`.
+These are split out from the rarely-changing config so the stuff you touch every
+week (roster, sponsors, stats) doesn't sit next to settings you set once.
+
+The JSON lives in `.js` files (assigned to globals like `window.SITE_DATA`)
+instead of `.json` files so the site still works when `index.html` is opened
+directly from disk — browsers block `fetch()` of local `.json` files over
+`file://`.
 
 Longer prose (mission text, page intros) stays in the HTML pages.
 
@@ -57,7 +63,10 @@ mission.html    # mission, stats, what is FTC, outreach photo gallery
 team.html       # member cards
 sponsors.html   # where funding goes, sponsor logos, become-a-sponsor CTA
 contact.html    # email + socials
-data/site.js    # ← ALL editable content (team number, email, members, stats, …)
+data/site.js    # core config: team number, email, socials
+data/members.js # team roster
+data/sponsors.js# sponsor list
+data/stats.js   # mission-page stat counters
 css/style.css   # all styling; brand colors are CSS variables at the top
 js/main.js      # renders data/site.js content + nav, reveals, counters
 assets/         # logo mark (mark.svg), icon, outreach photos

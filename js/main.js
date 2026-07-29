@@ -1,8 +1,11 @@
 // ============================================================
-// Renders content from data/site.js, then wires up nav + motion.
-// All content edits belong in data/site.js, not here.
+// Renders content from the data/*.js files, then wires up nav +
+// motion. All content edits belong in data/, not here.
 // ============================================================
 const DATA = window.SITE_DATA || {};
+const STATS = window.STATS || [];
+const MEMBERS = window.TEAM_MEMBERS || [];
+const SPONSORS = window.SPONSORS || [];
 
 // ---- render: team number + email links ----
 document.querySelectorAll("[data-team-number]").forEach((el) => {
@@ -18,8 +21,8 @@ document.querySelectorAll("[data-email]").forEach((el) => {
 
 // ---- render: stats (mission page) ----
 const statsGrid = document.getElementById("statsGrid");
-if (statsGrid && DATA.stats) {
-  statsGrid.innerHTML = DATA.stats
+if (statsGrid && STATS.length) {
+  statsGrid.innerHTML = STATS
     .map(
       (s) => `
       <div class="stat">
@@ -32,8 +35,8 @@ if (statsGrid && DATA.stats) {
 
 // ---- render: members (team page) ----
 const teamGrid = document.getElementById("teamGrid");
-if (teamGrid && DATA.members) {
-  teamGrid.innerHTML = DATA.members
+if (teamGrid && MEMBERS.length) {
+  teamGrid.innerHTML = MEMBERS
     .map(
       (m) => `
       <article class="agent reveal">
@@ -56,7 +59,7 @@ if (socialLinks && DATA.socials) {
 // ---- render: sponsors (sponsors page) ----
 const sponsorGrid = document.getElementById("sponsorGrid");
 if (sponsorGrid) {
-  const sponsors = DATA.sponsors || [];
+  const sponsors = SPONSORS;
   if (sponsors.length === 0) {
     sponsorGrid.innerHTML = Array.from(
       { length: 4 },
