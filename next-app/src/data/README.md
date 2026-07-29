@@ -25,10 +25,11 @@ Rarely-changing config:
 The team cards on `/team`. One object per person:
 
 ```json
-{ "initials": "A1", "name": "Member Name", "role": "Team Captain", "photo": "/team/jane.jpg" }
+{ "initials": "A1", "name": "Member Name", "grade": "10", "photo": "/team/jane.jpg" }
 ```
 
 - `initials` — shown as a placeholder graphic if there's no `photo`
+- `grade` — shown under the name as "Grade N"
 - `photo` — **optional**. To add one: drop the image file into
   `next-app/public/team/`, then set `photo` to `/team/<filename>` (the leading
   `/` matters — it's a site-root path, not a relative one). Omit `photo`

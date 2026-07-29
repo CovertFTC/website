@@ -1,6 +1,6 @@
 import membersData from "@/data/members.json";
 
-type Member = { initials: string; name: string; role: string; photo?: string };
+type Member = { initials: string; name: string; grade: string; photo?: string };
 const TEAM_MEMBERS = membersData as Member[];
 
 export default function TeamGrid() {
@@ -17,7 +17,7 @@ export default function TeamGrid() {
           </div>
           <h3>{m.name}</h3>
           <p className="agent-role">
-            <span className="redacted">{m.role}</span>
+            <span className="redacted">Grade {m.grade}</span>
           </p>
         </article>
       ))}
