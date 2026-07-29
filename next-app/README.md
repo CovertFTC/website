@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Covert Robotics team website — Next.js (App Router, TypeScript), statically
+exported for GitHub Pages.
 
-## Getting Started
+## Run locally
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
+```sh
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**All editable content lives in `src/data/`:**
 
-## Learn More
+- [`src/data/site.ts`](src/data/site.ts) — rarely-changing config: `teamNumber`
+  (home hero + every footer), `email` (contact page + "Become a Sponsor"
+  button), `socials` (link buttons on the contact page)
+- [`src/data/members.ts`](src/data/members.ts) — the team cards (initials,
+  name, role)
+- [`src/data/sponsors.ts`](src/data/sponsors.ts) — sponsor slots on the
+  sponsors page; while the list is empty the page shows "Your Logo Here"
+  placeholders. Add entries like
+  `{ name: "ACME Corp", logo: "/sponsor-acme.png", url: "https://acme.com" }`
+  (logo and url optional — drop logo images into `public/`)
+- [`src/data/stats.ts`](src/data/stats.ts) — the animated counters on the
+  mission page
 
-To learn more about Next.js, take a look at the following resources:
+Longer prose (mission text, page intros) lives directly in each page's
+`src/app/**/page.tsx`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/app/            # routes: / (home), /mission, /team, /sponsors, /contact
+src/app/layout.tsx   # shared <head>, Header/Footer/RevealScripts wrapper
+src/app/globals.css  # all styling; brand colors are CSS variables at the top
+src/components/      # Header (nav), Footer, StatsGrid, TeamGrid, SponsorGrid,
+                      # SocialLinks, RevealScripts (scroll reveals + counters)
+src/data/            # editable content, see above
+public/              # logo mark, icon, outreach photos, CNAME
+```
 
-## Deploy on Vercel
+## Build / deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```sh
+pnpm build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`next.config.ts` sets `output: "export"`, so this produces a static `out/`
+folder (no server needed). Pushing to `main` triggers
+[`.github/workflows/deploy.yml`](../.github/workflows/deploy.yml), which runs
+this build and deploys `out/` to GitHub Pages automatically.
