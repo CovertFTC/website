@@ -1,7 +1,7 @@
 [
-  { "initials": "A1", "name": "Member Name", "role": "Team Captain" },
-  { "initials": "A2", "name": "Member Name", "role": "Lead Programmer" },
-  { "initials": "A3", "name": "Member Name", "role": "Mechanical Lead" },
-  { "initials": "A4", "name": "Member Name", "role": "CAD & Design" },
-  { "initials": "A5", "name": "Member Name", "role": "Outreach Lead" }
+  { "initials": "DS", "name": "Devan", "grade": "10" },
+  { "initials": "GJ", "name": "Gabe", "grade": "10" },
+  { "initials": "SS", "name": "Sahil", "grade": "7" },
+  { "initials": "ZJ", "name": "Zach", "grade": "9" },
+  { "initials": "AS", "name": "Ayaan", "grade": "8" }
 ]
