@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Covert Robotics</title>
+  <meta name="description" content="Contact Covert Robotics — sponsorships, mentoring, and questions. Find us on email and social media.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Chakra+Petch:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="index.html" aria-label="Covert Robotics home">
+      <img class="nav-mark" src="assets/mark.svg" alt="">
+      <span class="nav-name">COVERT<em>ROBOTICS</em></span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="mission.html"><span>01</span>Mission</a>
+      <a href="team.html"><span>02</span>Team</a>
+      <a href="sponsors.html"><span>03</span>Sponsors</a>
+      <a href="contact.html" aria-current="page"><span>04</span>Contact</a>
+      <a class="nav-cta" href="sponsors.html">Sponsor&nbsp;Us</a>
+    </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <p class="mono-tag reveal-load" style="--d:0">04 // COMMS</p>
+      <h1 class="reveal-load" style="--d:1">Open a Channel</h1>
+    </section>
+
+    <section class="section">
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <p class="mono-tag">EMAIL</p>
+          <a class="contact-big" data-email="text" href="mailto:covertrobotics1@gmail.com">covertrobotics1@gmail.com</a>
+          <p class="contact-note">Sponsorships, mentoring, questions — we read everything.</p>
+        </div>
+        <div class="contact-card reveal">
+          <p class="mono-tag">FOLLOW THE MISSION</p>
+          <!-- populated from data/site.js -->
+          <div class="socials" id="socialLinks"></div>
+          <p class="contact-note">Build logs, match footage, and code drops.</p>
+        </div>
+      </div>
+
+      <div class="page-next reveal">
+        <a class="btn btn-ghost" href="index.html">← Back to Base</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer-mark" src="assets/mark.svg" alt="">
+    <p class="footer-line">COVERT ROBOTICS // FTC TEAM <span data-team-number>36702</span></p>
+    <p class="footer-fine">
+      <span id="year"></span> Covert Robotics.
+      <em>FIRST®</em> and <em>FIRST® Tech Challenge</em> are registered trademarks of FIRST.
+    </p>
+  </footer>
+
+  <script src="data/site.js"></script>
+  <script src="data/members.js"></script>
+  <script src="data/sponsors.js"></script>
+  <script src="data/stats.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
